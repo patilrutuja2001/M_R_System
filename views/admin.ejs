@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f7fc;
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 240px;
+      background: #2f3542;
+      color: #fff;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+    }
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+    .sidebar a {
+      padding: 15px 30px;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+    .sidebar a:hover {
+      background: #57606f;
+    }
+    .main-content {
+      margin-left: 240px;
+      width: 100%;
+      padding: 20px 40px;
+    }
+    .navbar {
+      background-color: #ffffff;
+      padding: 15px 20px;
+      font-size: 18px;
+      color: #2f3542;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    .dashboard-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #ffffff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      min-width: 220px;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      font-size: 20px;
+      color: #2f3542;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e90ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Users</a>
+    <a href="#">Movies</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <div class="main-content">
+    <div class="navbar">
+      Welcome, <%= adminname %>
+    </div>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3>Total Users</h3>
+        
+      </div>
+      <div class="card">
+        <h3>Total Movies</h3>
+       
+      </div>
+    </div>
+  </div>
+</body>
+</html>

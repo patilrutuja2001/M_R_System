@@ -16,8 +16,8 @@ exports.RegisterUser=(req,res)=>{
 }
 
 exports.SaveUserRegister=(req,res)=>{
-  let {username,email,password,contact}=req.body;
-  model.SaveUser(username,email,password,contact).then(()=>{
+  let {username,email,password,role}=req.body;
+  model.SaveUser(username,email,password,role).then(()=>{
     res.send("user register succesfulyy");
   }).catch((err)=>{
         console.log(err);
